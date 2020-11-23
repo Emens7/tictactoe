@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 21px;;
 }
 
 html, body {
@@ -11,26 +10,31 @@ html, body {
 
 body {
     display: grid;
-    background-color: aliceblue;
+    justify-content: center;
+    background-color: rgb(238, 232, 232);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.class {
-    border-radius: 1.5rem;
+.game {
+    margin: 1rem;
+    border-radius: 1rem;
     padding: 1rem;
+    background-color: khaki;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
 h1 {
     color: royalblue;
+    font-size: 5rem;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .board {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 10rem);
-    grid-template-rows: repeat(3, 10rem);
+    grid-template-columns: repeat(3, 11rem);
+    grid-template-rows: repeat(3, 11rem);
     grid-gap: 0.5rem;
     margin: 2rem 1rem;
 }
@@ -38,19 +42,23 @@ h1 {
 .cell {
     display: flex;
     justify-content: center;
-    
-    font-weight: 800;
-    color: brown;
     align-items: center;
+    font-size: 8rem;
+    font-weight: normal;
+    color: brown;
+    border-radius:  0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
 .cell:active, .cell:hover, .cell.winner {
     cursor: pointer;
-    color: skyblue;
+    color: rgb(235, 183, 135);
 }
 
 .cell-content {
-    /*overflow: hidden;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 0;
     height: 0;
 }
@@ -63,9 +71,8 @@ h1 {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgb(21, 32, 44);
-    opacity: 35%;
-
+    background-color: rgb(59, 90, 122);
+    opacity: 90%;
 }
 
 .game-result-modal {
@@ -80,10 +87,13 @@ h1 {
 
 .winner-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 4rem;
-    color: tomato;
+    margin-top: 8rem;
+    padding: 3rem;
+    font-size: 8rem;
+    color: rgb(197, 59, 34);
+    background-color: rgb(27, 24, 27);
+    border-radius: 0.5rem;
 }
 
 .new-game-container {
@@ -94,8 +104,9 @@ h1 {
 }
 
 .new-game-container > button {
-    font-size: 1rem;
+    font-size: 2rem;
     padding: 1rem;
+    border-radius: 0.5rem;
     color: red;
 }
 
