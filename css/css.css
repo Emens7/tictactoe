@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 21px;;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    background-color: aliceblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.class {
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
+
+h1 {
+    color: royalblue;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.board {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 10rem);
+    grid-template-rows: repeat(3, 10rem);
+    grid-gap: 0.5rem;
+    margin: 2rem 1rem;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    
+    font-weight: 800;
+    color: brown;
+    align-items: center;
+}
+
+.cell:active, .cell:hover, .cell.winner {
+    cursor: pointer;
+    color: skyblue;
+}
+
+.cell-content {
+    /*overflow: hidden;*/
+    width: 0;
+    height: 0;
+}
+
+.modal {
+    display: none;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(21, 32, 44);
+    opacity: 35%;
+
+}
+
+.game-result-modal {
+    display: grid;
+    grid-row-gap: 20rem;
+}
+
+.result-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.winner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    color: tomato;
+}
+
+.new-game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:  3rem;
+}
+
+.new-game-container > button {
+    font-size: 1rem;
+    padding: 1rem;
+    color: red;
+}
+
+.new-game-container > button:hover,
+.new-game-container > button:active {
+    color: rgb(85, 12, 12);
+    cursor: pointer;
+}
